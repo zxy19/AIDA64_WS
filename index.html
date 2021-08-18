@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+    <main>
+        <div class="block_a blockGroup_b">
+            <div class="block_c">
+                <h3 class="blockTitle" id="val_systime"></h3>
+                <img class="pic" src="res/clock.png">
+                <div class="desc">远程时间</div>
+            </div>
+            <div class="block_c">
+                <h3 class="blockTitle" id="val_msname"></h3>
+            </div>
+        </div>
+        
+        <div class="block_a">
+            <h3 class="blockTitle" id="val_sysmem" data-tail="MB"></h3>
+            <img class="pic" src="res/memory.png">
+            <div class="desc">内存</div>
+            <div class="processBar" id="prog_sysmem"></div>
+        </div>        
+        <div class="block_a">
+            <h3 class="blockTitle" id="val_gpu" data-tail="%"></h3>
+            <img class="pic" src="res/memory.png">
+            <div class="desc">GPU</div>
+            <div class="processBar" id="prog_gpu"></div>
+        </div>
+
+        <div class="block_a blockGroup_b">
+            <div class="block_b">
+                <h3 class="blockTitle" id="val_u1" data-tail="%"></h3>
+                <img class="pic" src="res/CPU.png">
+                <div class="desc">#1</div>
+                <div class="processBar" id="prog_u1"></div>
+            </div>
+            <div class="block_b">
+                <h3 class="blockTitle" id="val_u2" data-tail="%"></h3>
+                <img class="pic" src="res/CPU.png">
+                <div class="desc">#2</div>
+                <div class="processBar" id="prog_u2"></div>
+            </div>
+            <div class="block_b">
+                <h3 class="blockTitle" id="val_u5" data-tail="%"></h3>
+                <img class="pic" src="res/CPU.png">
+                <div class="desc">#5</div>
+                <div class="processBar" id="prog_u5"></div>
+            </div>
+            <div class="block_b">
+                <h3 class="blockTitle" id="val_u6" data-tail="%"></h3>
+                <img class="pic" src="res/CPU.png">
+                <div class="desc">#6</div>
+                <div class="processBar" id="prog_u6"></div>
+            </div>
+        </div>
+        <div class="block_a blockGroup_b">
+            <div class="block_b">
+                <h3 class="blockTitle" id="val_u3" data-tail="%"></h3>
+                <img class="pic" src="res/CPU.png">
+                <div class="desc">#3</div>
+                <div class="processBar" id="prog_u3"></div>
+            </div>
+            <div class="block_b">
+                <h3 class="blockTitle" id="val_u4" data-tail="%"></h3>
+                <img class="pic" src="res/CPU.png">
+                <div class="desc">#4</div>
+                <div class="processBar" id="prog_u4"></div>
+            </div>
+            <div class="block_b">
+                <h3 class="blockTitle" id="val_u7" data-tail="%"></h3>
+                <img class="pic" src="res/CPU.png">
+                <div class="desc">#7</div>
+                <div class="processBar" id="prog_u7"></div>
+            </div>
+            <div class="block_b">
+                <h3 class="blockTitle" id="val_u8" data-tail="%"></h3>
+                <img class="pic" src="res/CPU.png">
+                <div class="desc">#8</div>
+                <div class="processBar" id="prog_u8"></div>
+            </div>
+        </div>
+
+
+        <div class="block_a blockGroup_b">
+            <div class="block_b">
+                <h3 class="blockTitle" id="val_d11" data-tail="MB/S"></h3>
+                <img class="pic" src="res/disk.png">
+                <div class="desc">盘1·R</div>
+            </div>
+            <div class="block_b">
+                <h3 class="blockTitle" id="val_d21" data-tail="MB/S"></h3>
+                <img class="pic" src="res/disk.png">
+                <div class="desc">盘2·R</div>
+            </div>
+           <div class="block_b">
+                <h3 class="blockTitle" id="val_d12" data-tail="MB/S"></h3>
+                <img class="pic" src="res/disk.png">
+                <div class="desc">盘1·W</div>
+            </div>
+            <div class="block_b">
+                <h3 class="blockTitle" id="val_d22" data-tail="MB/S"></h3>
+                <img class="pic" src="res/disk.png">
+                <div class="desc">盘2·W</div>
+            </div>
+        </div>
+        <div class="block_a blockGroup_b">
+            <div class="block_b">
+                <h3 class="blockTitle" id="val_d31" data-tail="MB/S"></h3>
+                <img class="pic" src="res/disk.png">
+                <div class="desc">盘3·R</div>
+            </div>
+            <div class="block_b">
+                <h3 class="blockTitle" id="val_d41" data-tail="MB/S"></h3>
+                <img class="pic" src="res/disk.png">
+                <div class="desc">盘4·R</div>
+            </div>
+           <div class="block_b">
+                <h3 class="blockTitle" id="val_d32" data-tail="MB/S"></h3>
+                <img class="pic" src="res/disk.png">
+                <div class="desc">盘3·W</div>
+            </div>
+            <div class="block_b">
+                <h3 class="blockTitle" id="val_d42" data-tail="MB/S"></h3>
+                <img class="pic" src="res/disk.png">
+                <div class="desc">盘4·W</div>
+            </div>
+        </div>
+        <div class="block_a blockGroup_b">
+            <div class="block_b">
+                <h3 class="blockTitle" id="val_nup" data-tail="KB/S"></h3>
+                <img class="pic" src="res/up.png">
+                <div class="desc">上传</div>
+            </div>
+            <div class="block_b">
+                <h3 class="blockTitle" id="val_ndl" data-tail="KB/S"></h3>
+                <img class="pic" src="res/down.png">
+                <div class="desc">下载</div>
+            </div>
+            <div class="block_c">
+                <h3 class="blockTitle" id="val_nip"></h3>
+                <div class="desc">ip</div>
+            </div>
+        </div>
+        <div class="block_a">
+            <h3 class="blockTitle" id="val_battery" data-tail="%"></h3>
+            <img class="pic" src="res/battery.png">
+            <div class="desc" id="val_batteryType">电池</div>
+            <div class="processBar" id="prog_battery"></div>
+        </div>  
+        <div class="block_a blockGroup_b">
+            <div class="block_b">
+                <h3 class="blockTitle" id="val_vlm" data-tail="%"></h3>
+                <img class="pic" src="res/volume.png">
+                <div class="desc">音量</div>
+                <div class="processBar" id="prog_vlm"></div>
+            </div>
+            <div class="block_b">
+                <h3 class="blockTitle" id="val_brt" data-tail="%"></h3>
+                <img class="pic" src="res/sun.png">
+                <div class="desc">亮度</div>
+                <div class="processBar" id="prog_brt"></div>
+            </div>
+            <div class="block_c">
+                <h3 class="blockTitle" id="val_fps" data-tail="/S"></h3>
+                <img class="pic" src="res/pic2.png">
+                <div class="desc">FPS</div>
+                <div class="processBar" id="prog_fps"></div>
+            </div>
+        </div>
+    </main>
+    <script src="monitor.js"></script>
+</body>
+</html>

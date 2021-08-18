@@ -1,0 +1,95 @@
+.block_a {
+    width: 190px;
+    height: 160px;
+    border-radius: 15px;
+    border: gray solid 1px;
+    padding: 15px;
+    position: relative;
+    margin: 5px;
+    overflow: hidden;
+    float: left;
+}
+.block_a .pic {
+    height: 66px;
+    position: absolute;
+    right: 9px;
+    bottom: 6px;
+    opacity: 0.6;
+}
+.block_a .desc{
+    font-size: 60%;
+    opacity: 0.8;
+}
+.block_a .processBar{
+    position: absolute;
+    bottom: 0;left:0;width: 100%;z-index: -2;background-color: lightblue;
+    transition: height 0.5s;
+}
+.block_a.blockGroup_b{
+    border: none;
+    padding:0;
+    border-radius: 0;
+    margin:5px 0;
+    width: 200px;
+}
+.block_b {
+    width: 95px;
+    height: 77px;
+    border-radius: 7px;
+    border: gray solid 1px;
+    float: left;
+    padding: 4px;
+    position: relative;
+    margin: 2px;
+    overflow: hidden;
+}
+.block_b .pic {
+    height: 30px;
+    position: absolute;
+    right: 9px;
+    bottom: 6px;
+    opacity: 0.6;
+}
+.block_b .blockTitle{
+    font-size: 1.3rem;
+    margin-bottom: 3px;
+}
+.block_b .desc{
+    font-size: 60%;
+    opacity: 0.8;
+}
+.block_b .processBar{
+    position: absolute;
+    bottom: 0;left:0;width: 100%;z-index: -2;background-color: lightblue;
+    transition: height 0.5s;
+}
+.blockTitle:after{
+    content:attr(data-tail);
+    font-size: 15px;
+    color:darkgray;
+}
+.block_b .blockTitle:after{
+    font-size: 11px;
+}
+.block_c{
+    position: relative;
+    width: 190px;
+    height: 77px;
+    border-radius: 7px;
+    border: gray solid 1px;
+    float: left;
+    padding: 7px;
+    margin: 2px;
+}
+.block_c .blockTitle{
+    font-size: 1.25rem;
+    margin-bottom: 5px;
+
+}
+.block_c .pic {
+    height: 40px;
+    position: absolute;
+    right: 9px;
+    bottom: 6px;
+    opacity: 0.6;
+}
